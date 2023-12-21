@@ -1,0 +1,11 @@
+{
+  "name": "seat-booking-management-app",
+  "version": "1.0.0",
+  "description": "This is seat booking management which can be used to seat management by using this user can know how many seats he has left and the status of the service , who many custumer have checked in and how many have checked out and how many are being served. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adarsh Rai",
+  "license": "ISC"
+}
