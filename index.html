@@ -22,17 +22,17 @@
       let status = "Click to Checkout";
       
       function getCurrentTime() {
-         let date = new Date();
-         let hours = date.getHours();
-         let minutes = date.getMinutes();
-         let seconds = date.getSeconds();
-         let ampm = hours >= 12 ? 'PM' : 'AM';
-         hours = hours % 12;
-         hours = hours ? hours : 12; 
-         minutes = minutes < 10 ? '0'+minutes : minutes;
-         seconds = seconds < 10 ? '0'+seconds : seconds;
-         let strTime = hours + ':' + minutes + ':' +seconds + ' ' + ampm;
-          return strTime;
+        let date = new Date();
+        let hours = date.getHours();
+        let minutes = date.getMinutes();
+        let seconds = date.getSeconds();
+        let ampm = hours >= 12 ? 'PM' : 'AM';
+        hours = hours % 12;
+        hours = hours ? hours : 12; 
+        minutes = minutes < 10 ? '0'+minutes : minutes;
+        seconds = seconds < 10 ? '0'+seconds : seconds;
+        let strTime = hours + ':' + minutes + ':' +seconds + ' ' + ampm;
+        return strTime;
       }
 
       function handleSubmit(event){
@@ -40,18 +40,18 @@
         bookingTime = getCurrentTime()
 
          booking.unshift({
-             name: guestName.current.value,
-             phone: phoneNo.current.value,
-             count: count.current.value,
-             checkIn: bookingTime,
-             status:status,
-             checkout:"-"
-           })
+            name: guestName.current.value,
+            phone: phoneNo.current.value,
+            count: count.current.value,
+            checkIn: bookingTime,
+            status:status,
+            checkout:"-"
+          })
 
-            totalcount = totalcount + parseInt(count.current.value);
-            if (totalcount<26){
-                seatsLeft = seatsLeft - parseInt(count.current.value);
-            }
+          totalcount = totalcount + parseInt(count.current.value);
+          if (totalcount<26){
+            seatsLeft = seatsLeft - parseInt(count.current.value);
+          }
          
          count.current.value = "";
          guestName.current.value = "";
@@ -108,8 +108,8 @@
                 <th>Status</th>
                 <th>Remove Entry</th>
               </tr>
-          </thead>
-          <tbody> 
+           </thead>
+           <tbody> 
                 {
                    booking.map((res,index) => (
                         <tr key = {index}>
